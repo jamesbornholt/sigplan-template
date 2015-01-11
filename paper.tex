@@ -1,0 +1,49 @@
+\documentclass[10pt,natbib,preprint]{sigplanconf}
+
+\input{packages}  % package imports
+\input{macros}    % handy macros
+
+\begin{document}
+
+% conference info %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \conferenceinfo{ASPLOS~'14}{March 1--5, 2014, Salt Lake City, Utah, USA.} 
+% \copyrightyear{2014} 
+% \copyrightdata{978-1-4503-2305-5/14/03} 
+% \paperdoi{2541940.2541958}
+
+% draft stuff %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\IfFileExists{revision.tex}{\include{revision}}{\newcommand{\Revision}{???}}
+\preprintfooter{\textbf{DRAFT} revision \texttt{\Revision}}
+
+% title & authors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Life is Good: Graduation is Within Your Reach!}
+
+\authorinfo{Happy Researcher \and Delighted Researcher \and Ecstatic Researcher}
+           {University of Washington}
+           {\{happy, delight, ecstatic\}@cs.washington.edu}
+
+\maketitle
+
+% abstract & classification %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{abstract}
+
+{\footnotesize
+\category{D.3.3}{Programming Languages}{Language Constructs and Features}[Data
+    types and structures]
+\terms  % terms are optional
+Term One; Term Two; Term Three;
+\keywords
+Keyword One; Keyword Two; Keyword Three
+}
+
+% the actual paper! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+Immix is excellent, but could be faster~\citep{immix}.
+
+% bibliography %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{abbrvnat}
+\bibliography{paper}
+
+\end{document}
