@@ -1,3 +1,5 @@
+\newcount\draft\draft=1  % set to 0 for submission
+
 \documentclass[10pt,natbib,preprint]{sigplanconf}
 
 \input{packages}  % package imports
@@ -10,10 +12,6 @@
 % \copyrightyear{2014} 
 % \copyrightdata{978-1-4503-2305-5/14/03} 
 % \paperdoi{2541940.2541958}
-
-% draft stuff %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\IfFileExists{revision.tex}{\include{revision}}{\newcommand{\Revision}{???}}
-\preprintfooter{\textbf{DRAFT} revision \texttt{\Revision}}
 
 % title & authors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Life is Good: Graduation is Within Your Reach!}
@@ -40,7 +38,11 @@ Keyword One; Keyword Two; Keyword Three
 
 \section{Introduction}
 
-Immix is excellent, but could be faster~\citep{immix}.
+Immix is excellent, but could be faster~\citep{immix}. Previous efforts have
+focused on making Immix faster by making it do less work. This paper proposes
+a novel strategy: make Immix faster by making it do \emph{more work}. 
+\todo{this seems like nonsense!}
+After all, more work means more results.
 
 % bibliography %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{abbrvnat}

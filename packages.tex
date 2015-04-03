@@ -2,6 +2,7 @@
 \usepackage{mathptmx}              % times for math text
 \usepackage[scaled]{helvet}        % helvetica for sans-serif
 \usepackage{microtype}             % better text rendering
+\usepackage{courier}               % courier for fixed-width
 
 % bibliography %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[numbers,square,sort&compress]{natbib}
@@ -10,6 +11,12 @@
 \usepackage{graphicx}              % includegraphics
 \usepackage{caption,subcaption}    % subfigures & captions
 \usepackage{float}                 % non-stupid floats
+% get the sigplanconf caption style back
+\captionsetup[subfigure]{format=plain,labelformat=simple,aboveskip=0.3em,belowskip=0em}
+\DeclareCaptionFormat{hline}{\hrulefill\\#1#2#3}
+\captionsetup[figure]{format=hline} % uncomment to get the line above the caption
+\captionsetup{aboveskip=0.2em, belowskip=-0.8em, labelsep=period, labelfont=bf}
+\renewcommand\thesubfigure{(\alph{subfigure})}
 
 % tables %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{booktabs}              % pretty table spacing
@@ -32,3 +39,9 @@
 
 % listings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{listings}              % code listings
+
+% todos & draft stuff %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifnum\draft=1
+    \IfFileExists{revision.tex}{\include{revision}}{\newcommand{\Revision}{???}}
+    \usepackage{drafthead}
+\fi
